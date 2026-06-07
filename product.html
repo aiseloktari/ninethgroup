@@ -17,9 +17,86 @@
 <li>product</li>
 </ul>
 
-<p> This is the Product
-</p>
+<div id="homepage">
+
+    <h2>SKINSYNC</h2>
+    <p>Healthy Skin Starts Here</p>
+
+    <button onclick="showAnalysis()">
+        Let's Start
+    </button>
+
+</div>
+
+<div id="analysis" style="display:none;">
+
+    <h2>Skin Analysis</h2>
+
+    <p>Select Your Skin Type</p>
+
+    <select id="skinType">
+        <option>Oily Skin</option>
+        <option>Dry Skin</option>
+        <option>Combination Skin</option>
+        <option>Sensitive Skin</option>
+    </select>
+
+    <br><br>
+
+    <p>Select Your Concern</p>
+
+    <select id="concern">
+        <option>Acne</option>
+        <option>Dark Spots</option>
+        <option>Dull Skin</option>
+        <option>Large Pores</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="showResult()">
+        Analyze
+    </button>
+
+</div>
+
+<div id="result" style="display:none;">
+
+    <h2>Your Recommendation ✨</h2>
+
+    <p id="resultText"></p>
+
+</div>
+
+<script>
+
+function showAnalysis(){
+    document.getElementById("homepage").style.display="none";
+    document.getElementById("analysis").style.display="block";
+}
+
+function showResult(){
+
+    let skin =
+        document.getElementById("skinType").value;
+
+    let concern =
+        document.getElementById("concern").value;
+
+    document.getElementById("analysis").style.display="none";
+
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("resultText").innerHTML =
+        "Skin Type: " + skin +
+        "<br>Concern: " + concern +
+        "<br><br>Recommended Routine:" +
+        "<br>🧴 Gentle Cleanser" +
+        "<br>💧 Moisturizer" +
+        "<br>☀️ Sunscreen SPF 50";
+}
+
+</script>
 
 </body>
-
 </html>
