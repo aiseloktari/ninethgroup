@@ -1,21 +1,34 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fffaf7;
-    color: #5a4a42;
+    background-color: #FFEBFB;
+    font-family: 'Open Sans', sans-serif;
+    color: #6b4e63;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
+/* Header utama */
 h1 {
-    color: #c48b7a;
-    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    color: #d87ab5;
+    margin-bottom: 10px;
 }
 
+/* Subheader */
 h2 {
-    color: #c48b7a;
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #d87ab5;
 }
 
+/* Judul kecil */
+h3 {
+    font-weight: 700;
+    color: #b86495;
+}
+
+/* Navbar */
 ul {
     list-style: none;
     padding: 0;
@@ -23,54 +36,77 @@ ul {
 }
 
 ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 ul li a {
     text-decoration: none;
-    color: #c48b7a;
-    font-weight: bold;
+    color: #c76aa4;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 ul li a:hover {
-    color: #a66c5a;
+    color: #9e4d7e;
 }
 
+/* Card */
 #homepage,
 #analysis,
 #result {
     background: white;
-    max-width: 600px;
+    max-width: 650px;
     margin: 30px auto;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(216,122,181,0.15);
 }
 
-button {
-    background-color: #d6a692;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
+/* Teks biasa */
+p {
     font-size: 16px;
-    cursor: pointer;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
-button:hover {
-    background-color: #c48b7a;
+/* Bold khusus */
+strong {
+    font-weight: 700;
+    color: #b86495;
 }
 
+/* Dropdown */
 select {
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #d6a692;
-    width: 220px;
+    width: 250px;
+    padding: 12px;
+    border-radius: 15px;
+    border: 2px solid #f3c9e8;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
     font-size: 15px;
 }
 
+/* Tombol */
+button {
+    background: #e8a5cf;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #d87ab5;
+}
+
+/* Hasil rekomendasi */
 #resultText {
-    font-size: 18px;
-    line-height: 1.8;
+    line-height: 2;
+    font-size: 17px;
 }
