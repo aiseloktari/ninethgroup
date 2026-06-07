@@ -70,30 +70,146 @@
 
 <script>
 
+<script>
+
 function showAnalysis(){
-    document.getElementById("homepage").style.display="none";
-    document.getElementById("analysis").style.display="block";
+    document.getElementById("homepage").style.display = "none";
+    document.getElementById("analysis").style.display = "block";
 }
 
 function showResult(){
 
-    let skin =
-        document.getElementById("skinType").value;
+    let skin = document.getElementById("skinType").value;
+    let concern = document.getElementById("concern").value;
 
-    let concern =
-        document.getElementById("concern").value;
+    let recommendation = "";
 
-    document.getElementById("analysis").style.display="none";
+    if (skin === "Oily Skin" && concern === "Acne") {
+        recommendation =
+        "🧴 Salicylic Acid Cleanser<br>" +
+        "💧 Oil-Free Gel Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50<br><br>" +
+        "✨ Tip: Avoid heavy oil-based products.";
+    }
 
-    document.getElementById("result").style.display="block";
+    else if (skin === "Oily Skin" && concern === "Dark Spots") {
+        recommendation =
+        "🍊 Niacinamide Serum<br>" +
+        "💧 Lightweight Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50<br><br>" +
+        "✨ Tip: Use sunscreen consistently.";
+    }
+
+    else if (skin === "Oily Skin" && concern === "Dull Skin") {
+        recommendation =
+        "🍊 Vitamin C Serum<br>" +
+        "💧 Gel Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50<br><br>" +
+        "✨ Tip: Focus on brightening ingredients.";
+    }
+
+    else if (skin === "Oily Skin" && concern === "Large Pores") {
+        recommendation =
+        "🧴 Salicylic Acid Cleanser<br>" +
+        "🍊 Niacinamide Serum<br>" +
+        "💧 Gel Moisturizer<br><br>" +
+        "✨ Tip: Keep pores clean and hydrated.";
+    }
+
+    else if (skin === "Dry Skin" && concern === "Acne") {
+        recommendation =
+        "🧴 Gentle Hydrating Cleanser<br>" +
+        "💧 Ceramide Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50<br><br>" +
+        "✨ Tip: Protect your skin barrier.";
+    }
+
+    else if (skin === "Dry Skin" && concern === "Dark Spots") {
+        recommendation =
+        "🍊 Vitamin C Serum<br>" +
+        "💧 Rich Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50";
+    }
+
+    else if (skin === "Dry Skin" && concern === "Dull Skin") {
+        recommendation =
+        "🍊 Vitamin C Serum<br>" +
+        "💧 Hydrating Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50<br><br>" +
+        "✨ Tip: Increase hydration.";
+    }
+
+    else if (skin === "Dry Skin" && concern === "Large Pores") {
+        recommendation =
+        "🧴 Gentle Cleanser<br>" +
+        "💧 Ceramide Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50";
+    }
+
+    else if (skin === "Combination Skin" && concern === "Acne") {
+        recommendation =
+        "🧴 Salicylic Acid Cleanser<br>" +
+        "💧 Lightweight Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50";
+    }
+
+    else if (skin === "Combination Skin" && concern === "Dark Spots") {
+        recommendation =
+        "🍊 Niacinamide Serum<br>" +
+        "💧 Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50";
+    }
+
+    else if (skin === "Combination Skin" && concern === "Dull Skin") {
+        recommendation =
+        "🍊 Vitamin C Serum<br>" +
+        "💧 Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50";
+    }
+
+    else if (skin === "Combination Skin" && concern === "Large Pores") {
+        recommendation =
+        "🍊 Niacinamide Serum<br>" +
+        "💧 Gel Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50";
+    }
+
+    else if (skin === "Sensitive Skin" && concern === "Acne") {
+        recommendation =
+        "🌿 Fragrance-Free Cleanser<br>" +
+        "🌱 Centella Moisturizer<br>" +
+        "☀️ Mineral Sunscreen";
+    }
+
+    else if (skin === "Sensitive Skin" && concern === "Dark Spots") {
+        recommendation =
+        "🌿 Gentle Brightening Serum<br>" +
+        "🌱 Centella Moisturizer<br>" +
+        "☀️ Mineral Sunscreen";
+    }
+
+    else if (skin === "Sensitive Skin" && concern === "Dull Skin") {
+        recommendation =
+        "🍊 Mild Vitamin C Serum<br>" +
+        "🌱 Centella Moisturizer<br>" +
+        "☀️ Mineral Sunscreen";
+    }
+
+    else {
+        recommendation =
+        "🌿 Gentle Cleanser<br>" +
+        "💧 Moisturizer<br>" +
+        "☀️ Sunscreen SPF 50";
+    }
+
+    document.getElementById("analysis").style.display = "none";
+    document.getElementById("result").style.display = "block";
 
     document.getElementById("resultText").innerHTML =
-        "Skin Type: " + skin +
-        "<br>Concern: " + concern +
-        "<br><br>Recommended Routine:" +
-        "<br>🧴 Gentle Cleanser" +
-        "<br>💧 Moisturizer" +
-        "<br>☀️ Sunscreen SPF 50";
+        "<strong>Skin Type:</strong> " + skin +
+        "<br><strong>Concern:</strong> " + concern +
+        "<br><br>" +
+        recommendation;
 }
 
 </script>
